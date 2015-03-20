@@ -1,27 +1,44 @@
-Vim-CtrlP-CmdPalette
+CtrlP-CommandPalette
 ====================
 
-This is an extension for the awesome vim `CtrlP <https://github.com/kien/ctrlp.vim>`_ plugin.
+This is an extension for `CtrlP <https://github.com/kien/ctrlp.vim>`_ which adds
+a command palette akin to the ones found in Atom or Sublime Text.
 
-This extension adds a new CtrlP command, the ``:CtrlPCmdPalette``, which allows you to find and run vim commands (internal or custom).
+It's built upon the works of Juan Pedro Fisanotti `juandev
+<https://github.com/juandev>`_ (thank you!), though I felt that the changes were
+major enough to warrant a new project.
+
 
 Installation
 ------------
 
-First you will need to have `CtrlP <https://github.com/kien/ctrlp.vim>`_ installed and a vim compiled with python support. Once you have that:
+Since this is an extension to CtrlP, you need to first install CtrlP.
 
-* If you use `Vundle <https://github.com/gmarik/vundle>`_, add this to your bundles list: ``Bundle 'fisadev/vim-ctrlp-cmdpalette'``.
-* If you use `Patogen <https://github.com/tpope/vim-pathogen>`_, clone this repo inside your bundles dir.
+The preferred way to install CtrlP-Command-Palette is to use a package manager like Plug or Vundle.
+Just add ``Plug 'dbeecham/ctrlp-command-palette.vim'`` (or ``Bundle
+'dbeecham/ctrlp-command-palette.vim'`` if you use Vundle) to your .vimrc and
+``PlugInstall`` (or ``BundleInstall``). 
 
-Done! Now you can call ``:CtrlPCmdPalette``, or map it to a keybinding :)
+
+Usage
+-----
+
+Spawn CtrlP-CommandPalette using ``:CtrlPCommandPalette``. It's probably a good
+idea to bind this to some key:
+
+    nnoremap <leader>t :CtrlPCommandPalette<cr>
+
+
+TODO: write about the dictionaryj
 
 Options
 -------
-If you want the selected command to be executed by default, add this to your .vimrc
 
-``let g:ctrlp_cmdpalette_execute = 1``
+TODO
+
 
 Thanks
 ------
-Special thanks to the creator of `this plugin <https://github.com/sgur/ctrlp-extensions.vim>`_, which allowed me to learn how to extend CtrlP.
 
+A special thanks to Juan Pedro Fisanotti `juandev
+<https://github.com/juandev>`_ for his works on CtrlP-CmdPalette
