@@ -1,3 +1,5 @@
+
+" Number line {{{
 let s:relativeNumbers = &relativenumber
 let s:absoluteNumbers = &number
 
@@ -44,7 +46,9 @@ function! ctrlp#commandpalette_commands#ToggleNumbers()
     return
 
 endfunction
+" }}}
 
+" Syntax {{{
 function! ctrlp#commandpalette_commands#ToggleSyntax()
     if exists("g:syntax_on")
         syntax off
@@ -57,12 +61,24 @@ function! ctrlp#commandpalette_commands#SetSyntax()
     let l:newsyntax = input('Set syntax to: ', &syntax, 'syntax')
     execute "set syntax=" . l:newsyntax
 endfunction
+" }}}
 
 function! ctrlp#commandpalette_commands#OpenFile()
     let l:newfile = input('Open: ', '', 'file')
-    execute "open " . l:newfile
+    if !empty(l:newfile)
+        execute "open " . l:newfile
+    endif
 endfunction
 
+function! ctrlp#commandpalette_commands#SaveAs()
+    let l:newfile = input('Save as: ', '', 'file')
+    if !empty(l:newfile)
+        execute "saveas " . l:newfile
+    endif
+endfunction
+
+
+" The commandPalette dictionary of built-in commands.
 let s:commandPalette = {
     \ 'Unprintable characters: Toggle display': 
     \   'set list!',
@@ -93,9 +109,16 @@ let s:commandPalette = {
     \ 'Buffers: Close':
     \   'bdelete',
     \ 'Buffers: List':
-    \   'buffers'
+    \   'buffers',
+    \ 'Quit':
+    \   'quit',
+    \ 'Save':
+    \   'write',
+    \ 'Save as':
+    \   'call ctrlp#commandpalette_commands#SaveAs()'
     \ }
 
+" Add commands to g:commandPalette.
 if exists("g:commandPalette")
     call extend(g:commandPalette, s:commandPalette, "keep")
 else
