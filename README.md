@@ -74,4 +74,4 @@ to your .vimrc:
 Thanks
 ------
 
-A special thanks to Juan Pedro Fisanotti (juandev)[https://github.com/juandev] for his works on CtrlP-CmdPalette.
+A special thanks to Juan Pedro Fisanotti [juandev](https://github.com/juandev) for his works on CtrlP-CmdPalette.
