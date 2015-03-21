@@ -26,7 +26,7 @@ let s:commandPalette = {
     \   'set list!',
     \ 'Line numbers: Toggle relative':
     \   'set relativenumber!',
-    \ 'Line numbers: Toggle': 
+    \ 'Line numbers: Toggle visible': 
     \   'call ctrlp#commandpalette_commands#ToggleNumber()',
     \ 'Build (make)':
     \   'make',
@@ -39,7 +39,7 @@ let s:commandPalette = {
     \ 'Syntax highlighting: Set':
     \   'call ctrlp#commandpalette_commands#SetSyntax()',
     \ 'Syntax highlighting: Toggle':
-    \   'ctrlp#commandpalette_commands#ToggleSyntax()',
+    \   'call ctrlp#commandpalette_commands#ToggleSyntax()',
     \ 'File: Open':
     \   'call ctrlp#commandpalette_commands#OpenFile()',
     \ 'Buffers: New empty':
