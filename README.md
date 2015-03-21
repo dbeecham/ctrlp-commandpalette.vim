@@ -8,7 +8,7 @@ CtrlP-CommandPalette
 This is an extension for [CtrlP](https://github.com/kien/ctrlp.vim) which adds
 a "Command Palette" akin to the ones found in Atom or Sublime Text.
 
-It's built upon the works of Juan Pedro Fisanotti ([juandev](https://github.com/juandev)) (thank you!), 
+It's built upon the works of Juan Pedro Fisanotti ([fisadev](https://github.com/fisadev)) (thank you!), 
 though I felt that the changes were major enough to warrant a new project.
 
 It is very much a new project, and still has a certain want of build-in commands. 
@@ -74,4 +74,4 @@ to your .vimrc:
 Thanks
 ------
 
-A special thanks to Juan Pedro Fisanotti [juandev](https://github.com/juandev) for his works on CtrlP-CmdPalette.
+A special thanks to Juan Pedro Fisanotti [fisadev](https://github.com/fisadev) for his works on CtrlP-CmdPalette.
