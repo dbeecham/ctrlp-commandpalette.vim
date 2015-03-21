@@ -4,16 +4,16 @@ CtrlP-CommandPalette
 ![](https://raw.githubusercontent.com/dbeecham/dbeecham.github.com/master/commandpalette.gif)
 
 This is an extension for [CtrlP](https://github.com/kien/ctrlp.vim) which adds
-a command palette akin to the ones found in Atom or Sublime Text.
+a "Command Palette" akin to the ones found in Atom or Sublime Text.
 
 It's built upon the works of Juan Pedro Fisanotti ([juandev](https://github.com/juandev)) (thank you!), 
 though I felt that the changes were major enough to warrant a new project.
 
-It is very much a new project, and I am still in the process of adding commands
-and functionality. If you have any ideas for commands to implement, or comments
+It is very much a new project, and still has a certain want of build-in commands. 
+If you have any ideas for commands to implement, or comments
 about current functionality, [create an
 issue](https://github.com/dbeecham/ctrlp-commandpalette.vim/issues) or [drop a line in
-gitter](https://gitter.im/dbeecham/ctrlp-commandpalette.vim).
+gitter](https://gitter.im/dbeecham/ctrlp-commandpalette.vim)!
 
 
 Installation
