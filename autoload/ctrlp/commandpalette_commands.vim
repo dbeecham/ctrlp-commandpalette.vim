@@ -110,6 +110,8 @@ let s:commandPalette = {
     \   'bdelete',
     \ 'Buffers: List':
     \   'buffers',
+    \ 'Code folding: set method':
+    \   'call ctrlp#init(ctrlp#commandpalette_foldmethod#id())',
     \ 'Quit':
     \   'quit',
     \ 'Save':
