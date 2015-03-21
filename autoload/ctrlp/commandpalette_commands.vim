@@ -1,6 +1,48 @@
-function! ctrlp#commandpalette_commands#ToggleNumber()
-    set number!
+let s:relativeNumbers = &relativenumber
+let s:absoluteNumbers = &number
+
+function! ctrlp#commandpalette_commands#ToggleRelativeNumbers()
+    let s:relativeNumbers = !s:relativeNumbers
     set relativenumber!
+endfunction
+
+function! ctrlp#commandpalette_commands#ToggleAbsoluteNumbers()
+    let s:absoluteNumbers = !s:absoluteNumbers
+    set number!
+endfunction
+
+function! ctrlp#commandpalette_commands#ToggleNumbers()
+    " if number and relativenumber is on, toggle them both
+    if &number && &relativenumber
+        set number!
+        set relativenumber!
+        return
+    endif
+
+    " If both off, turn on whichever the user wants (s:relativeNumbers and
+    " s:absoluteNumbers)
+    if !(&number && &relativenumber)
+        if s:absoluteNumbers
+            set number!
+        end
+
+        if s:relativeNumbers
+            set relativenumber!
+        end
+
+        return
+    endif
+
+    " if number is on, toggle it.
+    if &number
+        set number!
+        return
+    endif
+
+    " if function reaches this point, relativenumber is on and number is off.
+    set relativenumber!
+    return
+
 endfunction
 
 function! ctrlp#commandpalette_commands#ToggleSyntax()
@@ -25,9 +67,11 @@ let s:commandPalette = {
     \ 'Unprintable characters: Toggle display': 
     \   'set list!',
     \ 'Line numbers: Toggle relative':
-    \   'set relativenumber!',
+    \   'call ctrlp#commandpalette_commands#ToggleRelativeNumbers()',
+    \ 'Line numbers: Toggle absolute':
+    \   'call ctrlp#commandpalette_commands#ToggleAbsoluteNumbers()',
     \ 'Line numbers: Toggle visible': 
-    \   'call ctrlp#commandpalette_commands#ToggleNumber()',
+    \   'call ctrlp#commandpalette_commands#ToggleNumbers()',
     \ 'Build (make)':
     \   'make',
     \ 'Window: Split horizontally':
