@@ -1,7 +1,7 @@
 CtrlP-CommandPalette
 ====================
 
-[[ https://raw.githubusercontent.com/dbeecham/dbeecham.github.com/master/commandpalette.gif ]]
+![](https://raw.githubusercontent.com/dbeecham/dbeecham.github.com/master/commandpalette.gif)
 
 This is an extension for `CtrlP <https://github.com/kien/ctrlp.vim>`_ which adds
 a command palette akin to the ones found in Atom or Sublime Text.
