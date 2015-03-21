@@ -53,7 +53,7 @@ yourself in your .vimrc, example:
 initialized (when spawning for the first time). 
 * The keys (the searchable
 strings) must be unique. 
-* You can alter the commandPalette at any time. 
+* You can alter the commandPalette Dictionary at any time. 
 * CtrlP-CommandPalette will not overwrite any entries in the
 dictionary, so to overwrite built-in behaviour, simply create an entry with the
 same key as the one you wish to overwrite.
@@ -72,5 +72,4 @@ to your .vimrc:
 Thanks
 ------
 
-A special thanks to Juan Pedro Fisanotti `juandev
-<https://github.com/juandev>` for his works on CtrlP-CmdPalette
+A special thanks to Juan Pedro Fisanotti (juandev)[https://github.com/juandev] for his works on CtrlP-CmdPalette.
