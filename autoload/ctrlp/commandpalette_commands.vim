@@ -110,6 +110,10 @@ let s:commandPalette = {
     \   'bdelete',
     \ 'Buffers: List':
     \   'buffers',
+    \ 'Buffers: Next':
+    \   'bnext',
+    \ 'Buffers: Previous':
+    \   'bprev',
     \ 'Code folding: set method':
     \   'call ctrlp#init(ctrlp#commandpalette_foldmethod#id())',
     \ 'Quit':
@@ -119,6 +123,15 @@ let s:commandPalette = {
     \ 'Save as':
     \   'call ctrlp#commandpalette_commands#SaveAs()'
     \ }
+
+" Extras
+if exists('g:loaded_tagbar')
+    call extend(g:commandPalette, {'Tagbar: Toggle': 'TagbarToggle'})
+endif
+
+if exists('g:loaded_nerd_tree')
+    call extend(g:commandPalette, {'File tree: Toggle': 'NERDTreeToggle'})
+endif
 
 " Add commands to g:commandPalette.
 if exists("g:commandPalette")
