@@ -126,11 +126,11 @@ let s:commandPalette = {
 
 " Extras
 if exists('g:loaded_tagbar')
-    call extend(g:commandPalette, {'Tagbar: Toggle': 'TagbarToggle'})
+    call extend(s:commandPalette, {'Tagbar: Toggle': 'TagbarToggle'})
 endif
 
 if exists('g:loaded_nerd_tree')
-    call extend(g:commandPalette, {'File tree: Toggle': 'NERDTreeToggle'})
+    call extend(s:commandPalette, {'File tree: Toggle': 'NERDTreeToggle'})
 endif
 
 " Add commands to g:commandPalette.
