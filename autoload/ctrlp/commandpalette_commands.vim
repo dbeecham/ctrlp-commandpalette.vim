@@ -70,6 +70,15 @@ function! ctrlp#commandpalette_commands#OpenFile()
     endif
 endfunction
 
+function! ctrlp#commandpalette_commands#TextWidth()
+    let l:textwidth = input('Text width: ', &textwidth)
+    if !empty(l:textwidth)
+        execute "set textwidth=" . l:textwidth
+    else
+        execute "set textwidth=0"
+    endif
+endfunction
+
 function! ctrlp#commandpalette_commands#SaveAs()
     let l:newfile = input('Save as: ', '', 'file')
     if !empty(l:newfile)
@@ -96,6 +105,8 @@ let s:commandPalette = {
     \   'vsplit',
     \ 'Paste mode: Toggle':
     \   'set paste!',
+    \ 'Text witdh: Set':
+    \   'call ctrlp#commandpalette_commands#TextWidth()',
     \ 'Syntax highlighting: Set':
     \   'call ctrlp#commandpalette_commands#SetSyntax()',
     \ 'Syntax highlighting: Toggle':
