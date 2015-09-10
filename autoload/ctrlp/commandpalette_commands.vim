@@ -63,6 +63,11 @@ function! ctrlp#commandpalette_commands#SetSyntax()
 endfunction
 " }}}
 
+function! ctrlp#commandpalette_commands#SetColorColumn()
+    let l:newcolorcolumn = input('Set colorized column width to (0 is off): ', &colorcolumn)
+    execute "set colorcolumn=" . l:newcolorcolumn
+endfunction
+
 function! ctrlp#commandpalette_commands#OpenFile()
     let l:newfile = input('Open: ', '', 'file')
     if !empty(l:newfile)
@@ -89,6 +94,8 @@ endfunction
 
 " The commandPalette dictionary of built-in commands.
 let s:commandPalette = {
+    \ 'Color column: Set width':
+    \   'call ctrlp#commandpalette_commands#SetColorColumn()',
     \ 'Unprintable characters: Toggle display': 
     \   'set list!',
     \ 'Line numbers: Toggle relative':
