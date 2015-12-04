@@ -112,7 +112,7 @@ let s:commandPalette = {
     \   'vsplit',
     \ 'Paste mode: Toggle':
     \   'set paste!',
-    \ 'Text witdh: Set':
+    \ 'Text width: Set':
     \   'call ctrlp#commandpalette_commands#TextWidth()',
     \ 'Syntax highlighting: Set':
     \   'call ctrlp#commandpalette_commands#SetSyntax()',
