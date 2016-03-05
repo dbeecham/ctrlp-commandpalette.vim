@@ -148,7 +148,11 @@ if exists('g:loaded_tagbar')
 endif
 
 if exists('g:loaded_nerd_tree')
-    call extend(s:commandPalette, {'File tree: Toggle': 'NERDTreeToggle'})
+    call extend(s:commandPalette, {'NERDtree: Toggle': 'NERDTreeToggle'})
+endif
+
+if exists('g:loaded_signify')
+    call extend(s:commandPalette, {'Signify: Refresh': 'SignifyRefresh'})
 endif
 
 " Add commands to g:commandPalette.
